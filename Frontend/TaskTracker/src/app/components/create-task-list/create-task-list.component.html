@@ -1,0 +1,28 @@
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <button routerLink="/" class="back-btn">←</button>
+    <h1>Create Task List</h1>
+  </div>
+
+  <!-- Form -->
+  <div class="form">
+
+    <div class="input-group">
+      <label>Title</label>
+      <input #title  type="text" placeholder="Enter task list title" />
+    </div>
+
+    <div class="input-group">
+      <label>Description</label>
+      <textarea #description placeholder="Enter task list description (optional)"></textarea>
+    </div>
+
+    <button class="create-btn" (click)="createTask(title.value,description.value)">Create Task List</button>
+
+  </div>
+
+</div>
+

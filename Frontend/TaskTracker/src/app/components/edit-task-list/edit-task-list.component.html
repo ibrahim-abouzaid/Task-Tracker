@@ -1,0 +1,28 @@
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <button [routerLink]="['task-list',taskList.id]" class="back-btn">←</button>
+    <h1>Update Task List</h1>
+  </div>
+
+  <!-- Form -->
+  <div class="form">
+
+    <div class="input-group">
+      <label>Title</label>
+      <input #title  type="text" [value]="taskList.title" placeholder="Enter task list title" />
+    </div>
+
+    <div class="input-group">
+      <label>Description</label>
+      <textarea #description [value]=taskList.description placeholder="Enter task list description (optional)"></textarea>
+    </div>
+
+    <button class="create-btn" (click)="editTask(title.value,description.value)">Update Task List</button>
+
+  </div>
+
+</div>
+

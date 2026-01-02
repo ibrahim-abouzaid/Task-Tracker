@@ -1,0 +1,54 @@
+
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <button [routerLink]="['']" class="icon-btn">←</button>
+    <h1 >{{taskList.title}}</h1>
+    <button [routerLink]="['/task-list',taskList.id,'update-task-list']" class="icon-btn">✎</button>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Add task -->
+  <button [routerLink]="['/task-list', taskList.id, 'new-task']" class="add-task-btn">
+    + Add Task
+  </button>
+
+  <!-- Tasks Table -->
+  <div class="table">
+
+    <div class="table-header">
+      <span>Completed</span>
+      <span>Title</span>
+      <span>Priority</span>
+      <span>Due Date</span>
+      <span>Actions</span>
+    </div>
+
+    <div class="table-row" *ngFor="let task of taskList.tasks">
+      <input type="checkbox">
+
+      <span class="task-title">{{task.title}}</span>
+
+      <span class="badge high">{{task.priority}}</span>
+
+      <span class="date">{{task.dueDate}}</span>
+
+      <div class="actions">
+        <button   class="icon-btn">✎</button>
+        <button class="icon-btn">🗑</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Delete task list -->
+  <button (click)="deleteTask()" class="delete-list-btn">
+    − Delete TaskList
+  </button>
+
+</div>
+

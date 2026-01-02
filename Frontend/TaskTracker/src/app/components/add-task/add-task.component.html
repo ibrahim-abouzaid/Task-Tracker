@@ -1,0 +1,60 @@
+
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <button [routerLink]="['/task-list', taskListId]"  class="back-btn">←</button>
+    <h1>Create Task</h1>
+  </div>
+
+  <!-- Form -->
+  <div class="form">
+
+    <div class="field">
+      <label>Title</label>
+      <input #title type="text" placeholder="Enter task title" />
+    </div>
+
+    <div class="field">
+      <label>Description</label>
+      <textarea #description placeholder="Enter task description (optional)"></textarea>
+    </div>
+
+    <div class="field">
+      <label>Due date (optional)</label>
+      <input #dueDate type="date" />
+    </div>
+
+    <!-- Priority -->
+    <div class="priority">
+      <button
+        class="priority-btn high"
+        [class.active]="priority === 'HIGH'"
+        (click)="setPriority('HIGH')">
+        HIGH Priority
+      </button>
+
+      <button
+        class="priority-btn medium"
+        [class.active]="priority === 'MEDIUM'"
+        (click)="setPriority('MEDIUM')">
+        MEDIUM Priority
+      </button>
+
+      <button
+        class="priority-btn low"
+        [class.active]="priority === 'LOW'"
+        (click)="setPriority('LOW')">
+        LOW Priority
+      </button>
+    </div>
+
+    <!-- Submit -->
+    <button (click)="createTask(title.value,description.value,dueDate.value)" class="create-btn">Create Task</button>
+
+  </div>
+
+</div>
+
+

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #000;
+  /*justify-content: center;*/
+  align-items: center;
+  color: white;
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}

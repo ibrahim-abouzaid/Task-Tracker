@@ -1,0 +1,127 @@
+
+
+.page {
+  width: 800px;
+  margin: 0 auto;
+  padding: 100px 0 0 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.icon-btn {
+  background: transparent;
+  border: 1px solid #2c2c2e;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: #2c2c2e;
+}
+
+.add-task-btn {
+  width: 100%;
+  padding: 14px;
+  margin: 20px 0;
+  background: #2c2c2e;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.add-task-btn:hover {
+  background: #3a3a3c;
+}
+
+.delete-list-btn {
+  margin-top: 20px;
+  background: #ff375f;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Divider */
+.divider {
+  height: 6px;
+  background: #1c1c1e;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+
+/* Table */
+.table {
+  background: #1c1c1e;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 120px 120px;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-header {
+  opacity: 0.6;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.table-row {
+  background: #2c2c2e;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.table-row input {
+  width: 18px;
+  height: 18px;
+}
+
+/* Priority badge */
+.badge {
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  width: fit-content;
+}
+
+.high {
+  background: #ff9f0a;
+  color: black;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Text */
+.task-title {
+  font-weight: 500;
+}
+
+.date {
+  opacity: 0.8;
+}

@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1>My Task Lists</h1>
+
+  <button class="create-btn" routerLink="/create-task-list">
+    <span class="plus">+</span> Create New Task List
+  </button>
+
+  <div *ngFor="let taskList of taskLists">
+
+
+  <div
+     class="task-card" [routerLink]="['/task-list', taskList.id]"
+  >
+    <div class="task-header">
+      <span class="menu">☰</span>
+      <span class="title">{{ taskList.title }}</span>
+    </div>
+
+    <p class="task-count">{{ taskList.Count }} tasks</p>
+
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="taskList.progress"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
