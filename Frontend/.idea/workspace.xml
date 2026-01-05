@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98300923-62b5-4a14-a9dd-d8beb5d20f6e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/IAbouzaid/Tasks/Dto/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/com/IAbouzaid/Tasks/Dto/TaskDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/Service/Task/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/Service/Task/task.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task-list/edit-task-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task-list/edit-task-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task/edit-task.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task/edit-task.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task/edit-task.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task/edit-task.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task/edit-task.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/edit-task/edit-task.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/task-list-details/task-list-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/task-list-details/task-list-details.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/task-list-details/task-list-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/task-list-details/task-list-details.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskTracker/src/app/components/task-list-details/task-list-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/app/components/task-list-details/task-list-details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskTracker/src/model/Task/task.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/model/Task/task.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskTracker/src/model/TaskList/task-list.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskTracker/src/model/TaskList/task-list.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +85,7 @@
       <workItem from="1767383338837" duration="6754000" />
       <workItem from="1767610958601" duration="958000" />
       <workItem from="1767638434430" duration="5533000" />
+      <workItem from="1767645012158" duration="2933000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,7 @@ import {Task} from "../../../model/Task/task";
 export class TaskListDetailsComponent {
 
   taskList:TaskList=new TaskList();
-  progress:number=0;
+
   constructor(private activeRoute: ActivatedRoute,
               private taskListService: TaskListService,
               private taskService: TaskService,
@@ -23,8 +23,6 @@ export class TaskListDetailsComponent {
   ngOnInit() {
     this.getTaskList();
 
-    this.progress=this.getProgress();
-    console.log("the closed tasks are "+this.progress);
   }
 
 getTaskList() {
@@ -33,6 +31,7 @@ getTaskList() {
     this.taskList.id = params.get('id')!;
    this.taskListService.getTaskListById(this.taskList.id).subscribe(taskList => {
      this.taskList=taskList;
+
    })
   });
 }
@@ -60,13 +59,15 @@ getTaskList() {
   });
 
 }
-  getProgress(): number {
-    if ( this.taskList.tasks.length === 0) return 0;
-
+  calculateProgress() {
+    const total = this.taskList.tasks.length;
+    if (total === 0) {
+      this.taskList.progress = 0;
+      return;
+    }
 
     const closed = this.taskList.tasks.filter(t => t.status === 'CLOSE').length;
-
-    return Math.round((closed / this.taskList.tasks.length) * 100);
+    this.taskList.progress = Math.round((closed / total) * 100);
   }
 
 

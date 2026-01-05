@@ -5,7 +5,7 @@ export class TaskList {
   title!: string;
   description?: string;
   Count?: number;
-  progress?: number;
+  progress!: number;
   tasks: Task[] = [];
 
 

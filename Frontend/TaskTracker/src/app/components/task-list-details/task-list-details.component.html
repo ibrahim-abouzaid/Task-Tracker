@@ -10,10 +10,10 @@
   </div>
 
   <div class="progress-container">
-    <div class="progress-bar" [style.width.%]="progress"></div>
+    <div class="progress-bar" [style.width.%]="taskList.progress"></div>
   </div>
 
-  <span>{{ progress }}%</span>
+  <span>{{ taskList.progress }}%</span>
 
   <!-- Add task -->
   <button [routerLink]="['/task-list', taskList.id, 'new-task']" class="add-task-btn">
