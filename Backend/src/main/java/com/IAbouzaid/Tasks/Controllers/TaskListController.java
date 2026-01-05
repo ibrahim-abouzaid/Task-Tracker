@@ -6,6 +6,7 @@ import com.IAbouzaid.Tasks.Mapper.TaskListMapper;
 import com.IAbouzaid.Tasks.Repositories.TaskListRepo;
 import com.IAbouzaid.Tasks.Service.TaskListService;
 import com.IAbouzaid.Tasks.model.TaskList;
+import com.IAbouzaid.Tasks.model.TaskStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +32,39 @@ public class TaskListController {
         return taskListService.getListOfTaskLists()
                 .stream()
                 .map(taskListMapper::toDto)
+                .map(this::calculateProgress)
                 .toList();
+    }
+    private TaskListDto calculateProgress(TaskListDto dto) {
+        if (dto.tasks() == null || dto.tasks().isEmpty()) {
+            return new TaskListDto(
+                    dto.id(),
+                    dto.title(),
+                    dto.description(),
+                    0,
+                    0.0,
+                    dto.tasks()
+            );
+        }
 
+        long closed = dto.tasks().stream()
+                .filter(task -> task.status() == TaskStatus.CLOSE)
+                .count();
+
+        int taskNumber=dto.tasks().size();
+        int progress = (int) Math.round(
+                (double) closed / dto.tasks().size() * 100
+        );
+
+        return new TaskListDto(
+                dto.id(),
+                dto.title(),
+                dto.description(),
+                taskNumber,
+                (double)progress,
+                dto.tasks()
+
+        );
     }
     @PostMapping
     public TaskListDto createTaskList(@RequestBody TaskListDto taskListDto){
@@ -45,7 +77,7 @@ public class TaskListController {
     @GetMapping(path = "/{task_list_id}")
     public Optional<TaskListDto> getTaskList(@PathVariable("task_list_id") UUID taskListId){
 
-        return taskListService.getTaskList(taskListId).map(taskListMapper::toDto);
+        return taskListService.getTaskList(taskListId).map(taskListMapper::toDto).map(this::calculateProgress);
 
     }
 
