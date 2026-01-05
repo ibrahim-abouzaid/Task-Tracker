@@ -4,7 +4,7 @@ export class Task {
   description!: string;
   dueDate?: string;
   priority!: 'LOW' | 'MEDIUM' | 'HIGH';
-  status!: boolean;
+  status!: 'OPEN' | 'CLOSE';
 
 
 }

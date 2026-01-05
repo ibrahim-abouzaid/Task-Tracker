@@ -9,8 +9,11 @@
     <button [routerLink]="['/task-list',taskList.id,'update-task-list']" class="icon-btn">✎</button>
   </div>
 
-  <!-- Divider -->
-  <div class="divider"></div>
+  <div class="progress-container">
+    <div class="progress-bar" [style.width.%]="progress"></div>
+  </div>
+
+  <span>{{ progress }}%</span>
 
   <!-- Add task -->
   <button [routerLink]="['/task-list', taskList.id, 'new-task']" class="add-task-btn">
@@ -29,17 +32,23 @@
     </div>
 
     <div class="table-row" *ngFor="let task of taskList.tasks">
-      <input type="checkbox">
+      <input
+        type="checkbox"
+        [checked]="task.status === 'CLOSE'"
+        (change)="toggleStatus(task)"
+      />
 
-      <span class="task-title">{{task.title}}</span>
+      <span [class.closed]="task.status === 'CLOSE'">
+  {{ task.title }}
+</span>
 
       <span class="badge high">{{task.priority}}</span>
 
       <span class="date">{{task.dueDate}}</span>
 
       <div class="actions">
-        <button   class="icon-btn">✎</button>
-        <button class="icon-btn">🗑</button>
+        <button [routerLink]="['/task-list', taskList.id, 'task',task.id]"  class="icon-btn">✎</button>
+        <button (click)="delectTask(task)" class="icon-btn">🗑</button>
       </div>
     </div>
 
