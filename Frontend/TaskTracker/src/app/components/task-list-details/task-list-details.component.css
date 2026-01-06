@@ -39,7 +39,7 @@
   width: 100%;
   padding: 14px;
   margin: 20px 0;
-  background: #2c2c2e;
+  background: #1688fd;
   border: none;
   border-radius: 14px;
   color: white;
@@ -47,7 +47,7 @@
 }
 
 .add-task-btn:hover {
-  background: #3a3a3c;
+  background: #2086af;
 }
 
 .delete-list-btn {
