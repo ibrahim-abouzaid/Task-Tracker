@@ -1,10 +1,8 @@
 name: build and deploy
 
 # when to trigger
-on: 
-   
+on:
 	# here i said when push on github repo
-  
     push: 
 	#which branches to do this action on it
         branches:
