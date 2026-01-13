@@ -12,7 +12,7 @@ on:
 			
 jobs:
 	# the name of this job
-    build-deploy: 
+    build-deploy:
         name: build and deploy spring boot CICD
 		#tell to run this pipeline on which server 
         runs-on: ubuntu-latest

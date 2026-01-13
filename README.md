@@ -5,6 +5,10 @@ Task Tracker is a full-stack web application that helps users manage task lists,
 This project was built to practice real-world backend and frontend integration using **Spring Boot** and **Angular**.
 
 ---
+## 📸 Screenshots
+
+![Task List](ScreenShots/mainList.png)
+![Tasks](ScreenShots/taskListDetails.png)
 
 ## 🚀 Features
 
