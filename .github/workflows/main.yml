@@ -21,6 +21,7 @@ jobs:
                   java-version: 17
 
             - name: Build the application
+              working-directory: Backend
               run: |
                   mvn clean
-                  mvn -B package --file pom.xml
+                  mvn -B package
